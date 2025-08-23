@@ -6,7 +6,7 @@
   --color-text: #dee2e6;
   --color-nav: #f2f2f2;
   --color-text-dark: #adb5bd;
-  --color-background-100: #343a40;
+  --color-white: #fff;
   --color-background-500: #2b3035;
   --color-background-900: #212529;
   --border-color: #2563eb;
@@ -27,7 +27,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-sale: "Playball", cursive;
   color: var(--color-main-text);
-  background-color: var(--color-text);
+  /* background-color: var(--color-text); */
   /* padding: 2.4rem; */
 }
 
@@ -104,6 +104,7 @@ body {
   text-align: center;
   padding: 80px 40px; /* 80px 40px default*/
   gap: 30px;
+  background-color: var(--color-text);
 }
 
 .hero-content h3 {
@@ -280,7 +281,7 @@ body {
   justify-content: flex-end;
   gap: 6px;
   padding: 18px;
-  color: #fff;
+  color: var(--color-white);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 45%,
@@ -308,6 +309,7 @@ body {
   left: 67%;
   bottom: 25%;
 }
+
 
 .content-left p {
   font-size: 14px;
@@ -344,7 +346,7 @@ button {
   border: none;
   border-radius: 6px;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -360,12 +362,12 @@ button:hover {
   padding: 6px 10px;
   border-radius: 3px;
   background: #fff;
-  /* color: #111; */
 }
+
 .pill-discount {
   width: 20%;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
 }
 
 /* responsiveness */
@@ -397,38 +399,141 @@ button:hover {
 
 /* ******* */
 
-.products-page {
-  padding: 2rem;
-  text-align: center;
+.feature-products {
+  background: #f9f9f9;
+  padding: 40px 80px;
 }
 
-.products-page h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.products-grid {
+.products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Always 5 columns */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
+.prodect-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  /* margin-bottom: 3rem; */
+}
+
+
+.product-categories{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+
+.product-categories span{
+  font-size: 1.6rem;
+  font-weight: 500;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+product-categories::after {
+  content: "";
+  display: block;
+  width: 80px;             /* underline length */
+  height: 4px;             /* underline thickness */
+  background: #2a9d8f;     /* accent color */
+  margin: 0.5rem auto 0;   /* centers it below the text */
+  border-radius: 2px;
+}
+
+.product-categories span::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  margin: 0.5rem auto 0;
+}
+
+
+
 .product-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: white;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
+
 .product-card img {
-  width: 100%;
-  height: 180px;
+  max-width: 100%;
+  height: 220px;
   object-fit: contain;
   margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-main-text);
+  margin-bottom: 0.5rem;
+  height: 40px;
+  text-align: start;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.product-card p {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: start;
+  padding-bottom: 4px;
+  text-transform: capitalize;
+  color: #2a9d8f;
+}
+.producs-details .price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.producs-details {
+  padding: 10px;
+}
+
+.rating {
+  text-align: start;
+  gap: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+/* ******* */
+
+.discount-card{
+  display: flex;
+  padding: 40px 80px;
+  gap: 20px;
+  
+}
+
+.discount-details{
+
+  
+}
+
+
+
+.discount-card img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.35s ease;
 }

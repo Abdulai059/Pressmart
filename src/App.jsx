@@ -5,6 +5,7 @@ import Services from "./component/Services";
 import Categories from "./component/Categories";
 import FeaturedProducts from "./component/FeaturedProducts";
 
+
 function App() {
   return (
     <>
