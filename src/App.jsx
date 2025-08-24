@@ -6,6 +6,7 @@ import Categories from "./component/Categories";
 import FeaturedProducts from "./component/FeaturedProducts";
 import DiscountCard from "./component/DiscountCard";
 import Footer from "./component/Footer/Footer";
+import Testimonials from "./component/CustomerTestimonials/CustomerTestimonials";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Categories />
       <FeaturedProducts />
       <DiscountCard />
+      
+      <Testimonials />
       <Footer />
     </>
   );

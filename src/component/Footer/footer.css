@@ -1,109 +1,222 @@
 .footer {
-  background-color: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  padding: 20px;
+  /* background-color: #f8fafc; */
+  border-top: 1px solid #e2e8f0;
+  padding: 90px 10px;
+  height: 40vh;
 }
 
-.footer-container {
-  max-width: 1300px;
+.footer-wrapper {
+  display: block;
+  max-width: 1400px;
   margin: 0 auto;
 }
+.footer-container {
+  /* max-width: 1300px; */
 
-.footer-header {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 48px;
+  gap: 40px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  gap: 10px;
 }
 
 .logo-icon {
-  color: #2563eb;
-  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-icon::before {
+  content: "››";
+  color: white;
   font-weight: bold;
-  margin-right: 8px;
+  font-size: 20px;
 }
 
 .logo-text {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  color: #111827;
+  color: #1e293b;
 }
 
-.social-container {
+.social-section {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .social-text {
-  color: #6b7280;
-  font-size: 16px;
-  margin-right: 16px;
+  color: #64748b;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+.social-container .icons {
+  display: flex;
+  gap: 10px;
 }
 
 .social-link {
-  color: #9ca3af;
+  color: #64748b;
   text-decoration: none;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
 }
 
 .social-link:hover {
-  color: #6b7280;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.footer-header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-title {
   font-weight: 600;
-  color: #111827;
-  margin-bottom: 16px;
-  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-size: 1.9rem;
 }
 
 .nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .nav-item {
-  margin-bottom: 12px;
+  margin: 0;
 }
 
 .nav-link {
-  color: #6b7280;
-  font-size: 1.5rem;
+  color: #64748b;
+  font-size: 1.6rem;
   text-decoration: none;
   transition: color 0.2s ease;
+  line-height: 1.5;
 }
 
 .nav-link:hover {
-  color: #374151;
+  color: #2563eb;
 }
 
-/* Tablet and Desktop Styles */
-@media (min-width: 768px) {
-  .footer-header {
-    flex-direction: row;
-    align-items: center;
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .footer {
+    padding: 32px 16px;
   }
 
-  .logo-container {
-    margin-bottom: 0;
+  .footer-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 
   .footer-nav {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .nav-section {
+    text-align: center;
+  }
+
+  .nav-list {
+    align-items: center;
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 36px 20px;
+  }
+
+  .footer-container {
+    gap: 48px;
+  }
+
+  .footer-nav {
+    gap: 40px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 12px;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 28px;
+    height: 28px;
   }
 }

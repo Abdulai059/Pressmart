@@ -1,4 +1,4 @@
-const footerData = [
+const navLinks = [
   {
     title: "About",
     links: ["About us", "Customer Support", "Support Center"],
@@ -11,6 +11,10 @@ const footerData = [
     title: "Our Company",
     links: ["Register", "Contact Us", "About Us"],
   },
+  {
+    title: "Resource",
+    links: ["FAQ's", "Testimonial", "Terms & Conditions" ],
+  },
 ];
 
-export default footerData;
+export default navLinks;
