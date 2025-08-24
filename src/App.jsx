@@ -5,6 +5,7 @@ import Services from "./component/Services";
 import Categories from "./component/Categories";
 import FeaturedProducts from "./component/FeaturedProducts";
 import DiscountCard from "./component/DiscountCard";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Categories />
       <FeaturedProducts />
       <DiscountCard />
+      <Footer />
     </>
   );
 }

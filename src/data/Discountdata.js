@@ -1,18 +1,21 @@
-
 const discounts = [
   {
     id: 1,
-    img: "./public/man-bag.jpg",
+    img: "./public/front-view.jpg",
     title: "Weekend Sale",
     headline: "Men's Fashion",
-    offer: "Flat 70% Off",
+    offerText: "Flat",
+    offerValue: "70%",
+    offerEnd: "Off",
   },
   {
     id: 2,
     img: "./public/curly-hair.jpg",
     title: "Weekend Sale",
     headline: "Women's Wear",
-    offer: "Flat 30%-70% Off",
+    offerText: "Flat",
+    offerValue: "30%-70%",
+    offerEnd: "Off",
   },
 ];
 

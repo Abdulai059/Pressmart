@@ -10,7 +10,10 @@ function DiscountCard() {
           <div className="discount-details">
             <h3>{detail.title}</h3>
             <h1>{detail.headline}</h1>
-            <p>{detail.offer}</p>
+            <p>
+              {detail.offerText} <span>{detail.offerValue}</span>{" "}
+              {detail.offerEnd}
+            </p>
             <Button>Shop Now</Button>
           </div>
         </div>
