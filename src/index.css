@@ -290,7 +290,7 @@ body {
 }
 
 .left-align {
-  justify-content: center; /* like the screenshot */
+  justify-content: center;
   /* align-items: flex-start; */
   background: radial-gradient(
       ellipse at 30% 40%,
@@ -309,7 +309,6 @@ body {
   left: 67%;
   bottom: 25%;
 }
-
 
 .content-left p {
   font-size: 14px;
@@ -419,8 +418,7 @@ button:hover {
   /* margin-bottom: 3rem; */
 }
 
-
-.product-categories{
+.product-categories {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -429,8 +427,7 @@ button:hover {
   margin-bottom: 15px;
 }
 
-
-.product-categories span{
+.product-categories span {
   font-size: 1.6rem;
   font-weight: 500;
   gap: 15px;
@@ -439,23 +436,21 @@ button:hover {
 product-categories::after {
   content: "";
   display: block;
-  width: 80px;             /* underline length */
-  height: 4px;             /* underline thickness */
-  background: #2a9d8f;     /* accent color */
-  margin: 0.5rem auto 0;   /* centers it below the text */
+  width: 80px; /* underline length */
+  height: 4px; /* underline thickness */
+  background: #2a9d8f; /* accent color */
+  margin: 0.5rem auto 0; /* centers it below the text */
   border-radius: 2px;
 }
 
 .product-categories span::after {
-  content: '';
+  content: "";
   display: block;
   width: 80px;
   height: 4px;
   background: var(--color-primary);
   margin: 0.5rem auto 0;
 }
-
-
 
 .product-card {
   background: white;
@@ -470,7 +465,6 @@ product-categories::after {
   transform: translateY(-5px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
-
 
 .product-card img {
   max-width: 100%;
@@ -515,25 +509,44 @@ product-categories::after {
 }
 
 /* ******* */
-
-.discount-card{
+.discount-card {
   display: flex;
+  flex-wrap: wrap; 
   padding: 40px 80px;
   gap: 20px;
-  
 }
 
-.discount-details{
-
-  
+.discount-card > div {
+  position: relative; 
+  flex: 1 1 45%; /
 }
 
-
-
-.discount-card img{
+.discount-card img {
   width: 100%;
-  height: 50%;
+  height: 80%; 
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.35s ease;
 }
+
+.discount-details {
+  position: absolute; 
+  bottom: 35%;
+  left: 5%;
+  color: var(--color-main-text);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.discount-details h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.discount-details h3,
+.discount-details p {
+  font-size: clamp(1rem, 2vw, 1.8rem);
+  font-weight: 500;
+}
+
+
