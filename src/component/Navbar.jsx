@@ -32,7 +32,7 @@ export default function Navbar() {
   );
 }
 
-function Search({ query, setQuery }) {
+function Search() {
   const [query, setQuery] = useState("");
   return (
     <div className="search-cotainer">
@@ -41,7 +41,7 @@ function Search({ query, setQuery }) {
         type="text"
         placeholder="search items"
         value={query}
-        onClick={(e) => setQuery(e.target.value)}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <SearchIcon className="search-btn" sx={{ fontSize: 25 }} />
     </div>
