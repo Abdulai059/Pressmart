@@ -3,7 +3,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Topbar from "./Topbar";
-import { useState } from "react";
+import SearchButton from "./Search";
+
 
 export default function Navbar() {
  
@@ -21,7 +22,7 @@ export default function Navbar() {
           <a href="/">Element</a>
           <a href="/">Buy</a>
         </nav>
-        <Search />
+        <SearchButton />
         <div className="nav-bar-icons">
           <FavoriteIcon fontSize="large" />
           <PersonIcon fontSize="large" />
@@ -32,18 +33,3 @@ export default function Navbar() {
   );
 }
 
-function Search() {
-  const [query, setQuery] = useState("");
-  return (
-    <div className="search-cotainer">
-      <input
-        className="search"
-        type="text"
-        placeholder="search items"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <SearchIcon className="search-btn" sx={{ fontSize: 25 }} />
-    </div>
-  );
-}
