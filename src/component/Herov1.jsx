@@ -1,58 +1,20 @@
-// import Button from "./Button";
-
-// function Hero() {
-//   return (
-//     <div className="hero">
-//       <div className="hero-content">
-//         <h3>Season Sale</h3>
-//         <h1>MEN'S FASHION</h1>
-//         <p>Mn. 35-70% Off</p>
-
-//         <div className="hero-button">
-//           <Button>SHOP NOW</Button>
-//           <Button className="btn-secondary">READ MORE</Button>
-//         </div>
-//       </div>
-
-//       <div className="hero-image">
-//         <img
-//           src="https://res.cloudinary.com/dvbtaqt2o/image/upload/v1755654656/man_uqpsab.png"
-//           alt="Men's Fashion"
-//         />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Hero;
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import "./Home.css";
-import  homeSlides from "./Hero/Home"
-
+import homeSlides from "./Hero/Home";
 
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % homeSlides.length);
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(slideInterval);
   }, []);
 
   return (
     <div>
-    
-      {/* External Icons */}
-     
-
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
@@ -68,12 +30,8 @@ function Hero() {
               <div className="home-indicator"></div>
 
               <div className="home-details-img">
-                <h4>
-                  {homeSlides[currentSlide].title}
-                </h4>
-                <p >
-                  {homeSlides[currentSlide].subtitle}
-                </p>
+                <h4>{homeSlides[currentSlide].title}</h4>
+                <p>{homeSlides[currentSlide].subtitle}</p>
               </div>
             </div>
 
@@ -93,9 +51,7 @@ function Hero() {
                     </span>
                   ))}
               </h1>
-              <p>
-                {homeSlides[currentSlide].description}
-              </p>
+              <p>{homeSlides[currentSlide].description}</p>
 
               <div className="home-buttons">
                 <button className="button">Buy Now</button>
@@ -123,6 +79,6 @@ function Hero() {
       </section>
     </div>
   );
-};
+}
 
 export default Hero;
