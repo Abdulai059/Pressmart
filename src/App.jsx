@@ -1,6 +1,6 @@
 import Navbar from "./component/Navbar";
 import "../src/index.css";
-import Hero from "./component/Herov1";
+import Hero from "./component/Herov2.jsx";
 import Services from "./component/Services";
 import Categories from "./component/Categories";
 import FeaturedProducts from "./component/FeaturedProducts";

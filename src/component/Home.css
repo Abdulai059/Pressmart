@@ -125,10 +125,11 @@ img {
   font-weight: var(--font-bold);
 }
 
-/* .home-data{
+.home-data{
   display: flex;
   flex-direction: column;
-} */
+  
+} 
 
 .home-data h1{
   font-size: var(--biggest-font-size);
@@ -298,7 +299,7 @@ img {
   .home-img {
     height: 200px;
   }
-
+  
   .home-title {
     font-size: 2rem;
   }
