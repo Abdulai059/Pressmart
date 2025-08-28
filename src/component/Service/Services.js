@@ -2,7 +2,7 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import PaymentIcon from "@mui/icons-material/Payment";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
-import Services from "../component/Services";
+import Services from "./Services";
 
 const services = [
   {

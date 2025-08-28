@@ -189,22 +189,21 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* Icon */
 .service-icon {
   font-size: 40px !important;
-  color: var(--color-primary); /* use your theme color */
+  /* color: var(--color-main-text); */
   flex-shrink: 0;
 }
 
-/* Title */
+
 .service-card h3 {
   margin: 0;
   font-size: 18px;
-  font-weight: 600;
+
   color: var(--title-color);
 }
 
-/* Description */
+
 .service-card p {
   margin: 6px 0 0;
   font-size: 14px;
@@ -221,7 +220,7 @@ body {
 
 @media (max-width: 600px) {
   .service {
-    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
 

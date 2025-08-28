@@ -1,15 +1,15 @@
+import React, { useState, useEffect } from "react";
 import "./Home.css";
-import homeSlides from "./Hero/Home";
-import { useEffect, useState } from "react";
+import homeSlides from "./Home";
 
-export default function Hero() {
+function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slide = homeSlides[currentSlide];
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % homeSlides.length);
     }, 5000);
+
     return () => clearInterval(slideInterval);
   }, []);
 
@@ -21,29 +21,38 @@ export default function Hero() {
           <div className="home-content grid">
             <div className="home-group">
               <img
-                src={slide.image}
-                alt={slide.title}
+                src={homeSlides[currentSlide].image}
+                alt={homeSlides[currentSlide].title}
                 className="home-img slide-enter"
                 key={currentSlide} // Forces re-render for animation
               />
+
               <div className="home-indicator"></div>
+
               <div className="home-details-img">
-                <h4>{slide.title}</h4>
-                <p>{slide.subtitle}</p>
+                <h4>{homeSlides[currentSlide].title}</h4>
+                <p>{homeSlides[currentSlide].subtitle}</p>
               </div>
             </div>
 
             <div className="home-data">
-              <h3 className="home-subtitle">{slide.trending}</h3>
+              <h3 className="home-subtitle">
+                {homeSlides[currentSlide].trending}
+              </h3>
               <h1>
-                {slide.mainTitle.split(" ").map((word, i) => (
-                  <span key={i}>
-                    {word}
-                    {i < slide.mainTitle.split(" ").length - 1 && <br />}
-                  </span>
-                ))}
+                {homeSlides[currentSlide].mainTitle
+                  .split(" ")
+                  .map((word, index) => (
+                    <span key={index}>
+                      {word}
+                      {index <
+                        homeSlides[currentSlide].mainTitle.split(" ").length -
+                          1 && <br />}
+                    </span>
+                  ))}
               </h1>
-              <p>{slide.description}</p>
+              <p>{homeSlides[currentSlide].description}</p>
+
               <div className="home-buttons">
                 <button className="button">Buy Now</button>
                 <a href="#" className="button-link button-flex">
@@ -63,7 +72,7 @@ export default function Hero() {
                   index === currentSlide ? "active" : ""
                 }`}
                 onClick={() => setCurrentSlide(index)}
-              />
+              ></span>
             ))}
           </div>
         </div>
@@ -71,3 +80,5 @@ export default function Hero() {
     </div>
   );
 }
+
+export default Hero;

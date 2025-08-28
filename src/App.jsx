@@ -1,9 +1,9 @@
-import Navbar from "./component/Navbar";
+import Navbar from "./component/Navbar/Navbar.jsx";
 import "../src/index.css";
-import Hero from "./component/Herov2.jsx";
-import Services from "./component/Services";
+import Hero from "./component/Hero/Herov2.jsx";
+import Services from "./component/Service/Services.jsx";
 import Categories from "./component/Categories";
-import FeaturedProducts from "./component/FeaturedProducts";
+import FeaturedProducts from "./pages/FeaturedProducts.jsx";
 import DiscountCard from "./component/DiscountCard";
 import Footer from "./component/Footer/Footer";
 import Testimonials from "./component/CustomerTestimonials/CustomerTestimonials";

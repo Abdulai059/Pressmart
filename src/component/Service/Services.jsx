@@ -1,4 +1,4 @@
-import services from "../data/Services";
+import services from "./Services";
 
 function Services() {
   return (

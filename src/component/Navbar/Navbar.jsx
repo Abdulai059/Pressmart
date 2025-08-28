@@ -5,9 +5,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Topbar from "./Topbar";
 import SearchButton from "./Search";
 
-
 export default function Navbar() {
- 
   return (
     <>
       <Topbar />
@@ -32,4 +30,3 @@ export default function Navbar() {
     </>
   );
 }
-

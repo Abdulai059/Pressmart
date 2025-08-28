@@ -60,18 +60,6 @@ function Products() {
     <>
       <section className="feature-products">
         <h2 className="prodect-title">Feature Products</h2>
-        {/* <div className="product-categories">
-          {TABS.map((toggle) => (
-            <button
-              key={toggle.id}
-              type="button"
-              className={`tab ${selected === toggle.id ? "active" : ""}`}
-              onClick={() => setSelected(toggle.id)}
-            >
-              {toggle.}
-            </button>label
-          ))}
-        </div> */}
 
         <div className="product-categories">
           {CategoryTabs.map((tab) => (
